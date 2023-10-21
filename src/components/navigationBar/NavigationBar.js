@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NavigationBar.css"
-import * as ROUTES from "../../components/routes/routes";
+import * as ROUTES from "../../routes/routes";
 
 const NavigationBar = () => {
     return (
