@@ -1,35 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import logo from './logo.svg';
+import * as ROUTES from "./components/routes/routes";
 import './App.css';
-import NavigationBar from './components/NavigationBar/NavigationBar';
-import Charger from './components/Charger';
+import NavigationBar from './components/navigationBar';
+import Charger from './components/charger';
+import SignUpForm from './components/signupform';
 
 
 
 const App = () => {
   return (
 
-
     <Router>
       <NavigationBar />
 
       <Switch>
-
-        <Route path="/profile">
-          <h1>Welcome !!!</h1>
-        </Route>
-
-        <Route path="/">
-
-          <div className="App">
-            {  /*<img src={logo} className='App-logo' alt='logo'/> */}
-
-            <Charger />
-          </div>
-
-        </Route>
-
+        <Route path={ROUTES.SIGN_UP} component={SignUpForm} />
+        <Route path={ROUTES.HOME} component={Charger} />
       </Switch>
 
     </Router>
